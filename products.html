@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop - LuminaStore</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Navbar (Same as index.html) -->
+    <nav class="navbar navbar-expand-lg sticky-top border-bottom">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Lumina<span>Store</span></a>
+            <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarMain">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="products.html">Shop</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+                <div class="nav-icons d-flex align-items-center ms-lg-4 gap-2 mt-3 mt-lg-0">
+                    <a href="login.html" class="btn"><i class="far fa-user"></i></a>
+                    <a href="cart.html" class="btn"><i class="fas fa-shopping-bag"></i><span class="badge">2</span></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <div class="bg-light py-3 border-bottom">
+        <div class="container">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb mb-0">
+                    <li class="breadcrumb-item"><a href="index.html" class="text-decoration-none">Home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Shop</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <!-- Sidebar Filters -->
+                <div class="col-lg-3 mb-4 mb-lg-0">
+                    <div class="filter-sidebar sticky-top" style="top: 100px; z-index: 1;">
+                        <h4 class="filter-title">Categories</h4>
+                        <div class="mb-4">
+                            <div class="form-check mb-2">
+                                <input class="form-check-input" type="checkbox" id="cat1" checked>
+                                <label class="form-check-label text-muted" for="cat1">All Categories (45)</label>
+                            </div>
+                            <div class="form-check mb-2">
+                                <input class="form-check-input" type="checkbox" id="cat2">
+                                <label class="form-check-label text-muted" for="cat2">Electronics (12)</label>
+                            </div>
+                            <div class="form-check mb-2">
+                                <input class="form-check-input" type="checkbox" id="cat3">
+                                <label class="form-check-label text-muted" for="cat3">Shoes (8)</label>
+                            </div>
+                            <div class="form-check mb-2">
+                                <input class="form-check-input" type="checkbox" id="cat4">
+                                <label class="form-check-label text-muted" for="cat4">Watches (15)</label>
+                            </div>
+                        </div>
+
+                        <h4 class="filter-title">Price Range</h4>
+                        <div class="mb-4">
+                            <input type="range" class="form-range" min="0" max="1000" id="priceRange">
+                            <div class="d-flex justify-content-between text-muted small mt-2">
+                                <span>$0</span>
+                                <span>$1000+</span>
+                            </div>
+                        </div>
+
+                        <h4 class="filter-title">Rating</h4>
+                        <div class="mb-4">
+                            <div class="form-check mb-2">
+                                <input class="form-check-input" type="checkbox" id="star5">
+                                <label class="form-check-label text-warning" for="star5">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                </label>
+                            </div>
+                            <div class="form-check mb-2">
+                                <input class="form-check-input" type="checkbox" id="star4">
+                                <label class="form-check-label text-warning" for="star4">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i> & up
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <button class="btn btn-outline-dark w-100 rounded-3">Apply Filters</button>
+                    </div>
+                </div>
+
+                <!-- Products Grid -->
+                <div class="col-lg-9">
+                    <!-- Top Bar -->
+                    <div class="d-flex justify-content-between align-items-center mb-4">
+                        <p class="mb-0 text-muted">Showing 1-9 of 45 results</p>
+                        <div class="d-flex align-items-center gap-2">
+                            <label class="text-nowrap mb-0 text-muted">Sort By:</label>
+                            <select class="form-select form-select-sm border-0 bg-light rounded-3" style="width: auto;">
+                                <option>Latest</option>
+                                <option>Price: Low to High</option>
+                                <option>Price: High to Low</option>
+                                <option>Top Rated</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="row g-4">
+                        <!-- Product 1 -->
+                        <div class="col-md-6 col-xl-4">
+                            <div class="product-card">
+                                <div class="product-img-wrapper">
+                                    <img src="https://images.unsplash.com/photo-1583394838336-acd977736f90?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Product">
+                                    <div class="product-actions">
+                                        <button class="action-btn"><i class="far fa-heart"></i></button>
+                                    </div>
+                                </div>
+                                <div class="product-info">
+                                    <a href="product-details.html" class="product-title">Premium Wireless Headphones</a>
+                                    <div class="product-price">$249.99</div>
+                                    <button class="add-to-cart-btn">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Product 2 -->
+                        <div class="col-md-6 col-xl-4">
+                            <div class="product-card">
+                                <span class="discount-badge">-10%</span>
+                                <div class="product-img-wrapper">
+                                    <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Product">
+                                    <div class="product-actions">
+                                        <button class="action-btn"><i class="far fa-heart"></i></button>
+                                    </div>
+                                </div>
+                                <div class="product-info">
+                                    <a href="product-details.html" class="product-title">Minimalist Smartwatch</a>
+                                    <div class="product-price">$399.00 <del>$440.00</del></div>
+                                    <button class="add-to-cart-btn">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Product 3 -->
+                        <div class="col-md-6 col-xl-4">
+                            <div class="product-card">
+                                <div class="product-img-wrapper">
+                                    <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Product">
+                                    <div class="product-actions">
+                                        <button class="action-btn"><i class="far fa-heart"></i></button>
+                                    </div>
+                                </div>
+                                <div class="product-info">
+                                    <a href="product-details.html" class="product-title">Air Max Sneakers</a>
+                                    <div class="product-price">$129.99</div>
+                                    <button class="add-to-cart-btn">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Add more products to make it look full -->
+                        <!-- Product 4 -->
+                        <div class="col-md-6 col-xl-4">
+                            <div class="product-card">
+                                <div class="product-img-wrapper">
+                                    <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Product">
+                                    <div class="product-actions">
+                                        <button class="action-btn"><i class="far fa-heart"></i></button>
+                                    </div>
+                                </div>
+                                <div class="product-info">
+                                    <a href="product-details.html" class="product-title">Studio Headphones</a>
+                                    <div class="product-price">$189.99</div>
+                                    <button class="add-to-cart-btn">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Product 5 -->
+                        <div class="col-md-6 col-xl-4">
+                            <div class="product-card">
+                                <div class="product-img-wrapper">
+                                    <img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Product">
+                                    <div class="product-actions">
+                                        <button class="action-btn"><i class="far fa-heart"></i></button>
+                                    </div>
+                                </div>
+                                <div class="product-info">
+                                    <a href="product-details.html" class="product-title">Polaroid Camera</a>
+                                    <div class="product-price">$89.00</div>
+                                    <button class="add-to-cart-btn">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Product 6 -->
+                        <div class="col-md-6 col-xl-4">
+                            <div class="product-card">
+                                <div class="product-img-wrapper">
+                                    <img src="https://images.unsplash.com/photo-1606813907291-d86efa9b94db?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Product">
+                                    <div class="product-actions">
+                                        <button class="action-btn"><i class="far fa-heart"></i></button>
+                                    </div>
+                                </div>
+                                <div class="product-info">
+                                    <a href="product-details.html" class="product-title">Gaming Console</a>
+                                    <div class="product-price">$499.99</div>
+                                    <button class="add-to-cart-btn">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pagination -->
+                    <nav class="mt-5" aria-label="Page navigation">
+                        <ul class="pagination justify-content-center">
+                            <li class="page-item disabled"><a class="page-link border-0 text-muted" href="#">Previous</a></li>
+                            <li class="page-item active"><a class="page-link bg-dark border-dark" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link text-dark border-0" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link text-dark border-0" href="#">3</a></li>
+                            <li class="page-item"><a class="page-link text-dark border-0" href="#">Next</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer mt-0">
+        <div class="container text-center">
+            <p class="mb-0">&copy; 2026 LuminaStore. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

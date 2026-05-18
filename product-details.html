@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details - LuminaStore</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg sticky-top border-bottom">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Lumina<span>Store</span></a>
+            <div class="d-flex align-items-center gap-3 ms-auto">
+                <a href="products.html" class="nav-link d-none d-lg-block">Shop</a>
+                <a href="cart.html" class="btn position-relative p-0 border-0 fs-5"><i class="fas fa-shopping-bag"></i></a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <div class="bg-light py-3">
+        <div class="container">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb mb-0 small">
+                    <li class="breadcrumb-item"><a href="index.html" class="text-decoration-none">Home</a></li>
+                    <li class="breadcrumb-item"><a href="products.html" class="text-decoration-none">Electronics</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Wireless Headphones</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Product Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row g-5">
+                <!-- Product Images -->
+                <div class="col-lg-6">
+                    <div class="product-gallery">
+                        <div class="main-image">
+                            <img src="https://images.unsplash.com/photo-1583394838336-acd977736f90?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Product" class="img-fluid" id="mainImg">
+                        </div>
+                        <div class="thumbnail-list mt-3">
+                            <img src="https://images.unsplash.com/photo-1583394838336-acd977736f90?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" class="thumbnail active" onclick="changeImage(this.src)">
+                            <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" class="thumbnail" onclick="changeImage(this.src)">
+                            <img src="https://images.unsplash.com/photo-1484704849700-f032a568e944?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" class="thumbnail" onclick="changeImage(this.src)">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Info -->
+                <div class="col-lg-6">
+                    <div class="mb-3 d-flex align-items-center gap-2">
+                        <span class="badge bg-danger rounded-pill px-3">Sale</span>
+                        <span class="text-muted small">ID: LMN-45892</span>
+                    </div>
+                    <h1 class="fw-bold mb-3">Premium Wireless Noise-Cancelling Headphones</h1>
+                    
+                    <div class="d-flex align-items-center mb-4">
+                        <div class="product-rating text-warning me-2 mb-0">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <span class="text-muted small">(128 Reviews)</span>
+                    </div>
+
+                    <div class="mb-4">
+                        <h2 class="text-primary fw-bold mb-0 d-flex align-items-center gap-3">
+                            $249.99 
+                            <del class="text-muted fs-5 fw-normal">$299.99</del>
+                        </h2>
+                        <p class="text-success small mt-1"><i class="fas fa-check-circle me-1"></i> In Stock</p>
+                    </div>
+
+                    <p class="text-muted mb-4">Experience high-fidelity audio with our premium wireless headphones. Featuring industry-leading noise cancellation, 30-hour battery life, and ultra-comfortable ear cushions for all-day listening.</p>
+
+                    <hr class="mb-4">
+
+                    <!-- Options -->
+                    <div class="mb-4">
+                        <label class="fw-bold mb-2">Color:</label>
+                        <div class="d-flex gap-2">
+                            <input type="radio" class="btn-check" name="color" id="black" autocomplete="off" checked>
+                            <label class="btn btn-outline-dark rounded-circle p-3" for="black" style="background-color: #111;"></label>
+
+                            <input type="radio" class="btn-check" name="color" id="white" autocomplete="off">
+                            <label class="btn btn-outline-dark rounded-circle p-3" for="white" style="background-color: #f1f1f1;"></label>
+                        </div>
+                    </div>
+
+                    <div class="d-flex gap-3 mb-4 align-items-center">
+                        <label class="fw-bold mb-0">Quantity:</label>
+                        <div class="quantity-selector">
+                            <button type="button" onclick="this.parentNode.querySelector('input[type=number]').stepDown()">-</button>
+                            <input type="number" min="1" value="1">
+                            <button type="button" onclick="this.parentNode.querySelector('input[type=number]').stepUp()">+</button>
+                        </div>
+                    </div>
+
+                    <div class="d-flex gap-3">
+                        <button class="btn btn-primary btn-lg flex-grow-1 rounded-pill fw-bold bg-dark border-dark">Add to Cart</button>
+                        <button class="btn btn-outline-dark btn-lg rounded-circle px-3"><i class="far fa-heart"></i></button>
+                    </div>
+
+                    <div class="mt-4 p-3 bg-light rounded-3">
+                        <ul class="list-unstyled mb-0 text-muted small">
+                            <li class="mb-2"><i class="fas fa-truck text-dark me-2"></i> Free shipping on orders over $50</li>
+                            <li class="mb-2"><i class="fas fa-undo text-dark me-2"></i> 30 days return policy</li>
+                            <li><i class="fas fa-shield-alt text-dark me-2"></i> 2 years warranty included</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tabs -->
+            <div class="row mt-5">
+                <div class="col-12">
+                    <ul class="nav nav-tabs mb-4 border-bottom-0 gap-2" id="productTabs" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active rounded-pill bg-light text-dark px-4" id="desc-tab" data-bs-toggle="tab" data-bs-target="#desc" type="button" role="tab">Description</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link rounded-pill bg-light text-dark px-4 border-0" id="specs-tab" data-bs-toggle="tab" data-bs-target="#specs" type="button" role="tab">Specifications</button>
+                        </li>
+                    </ul>
+                    <div class="tab-content" id="productTabsContent">
+                        <div class="tab-pane fade show active text-muted" id="desc" role="tabpanel">
+                            <p>Lose yourself in your music with these premium wireless headphones. Designed with advanced noise-canceling technology, they block out distractions so you can focus on what matters. The ergonomic design ensures long-lasting comfort, while the high-resolution audio drivers deliver crisp highs and deep bass.</p>
+                            <p>With up to 30 hours of battery life on a single charge and fast-charging capabilities, these headphones are perfect for long flights, daily commutes, or intense work sessions.</p>
+                        </div>
+                        <div class="tab-pane fade text-muted" id="specs" role="tabpanel">
+                            <table class="table table-bordered w-50">
+                                <tbody>
+                                    <tr><th class="bg-light w-25">Weight</th><td>254g</td></tr>
+                                    <tr><th class="bg-light">Bluetooth</th><td>Version 5.2</td></tr>
+                                    <tr><th class="bg-light">Battery Life</th><td>30 Hours (ANC ON)</td></tr>
+                                    <tr><th class="bg-light">Charging Port</th><td>USB-C</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer mt-0 text-center py-4 bg-dark text-white">
+        <p class="mb-0">&copy; 2026 LuminaStore.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function changeImage(src) {
+            document.getElementById('mainImg').src = src;
+            document.querySelectorAll('.thumbnail').forEach(el => el.classList.remove('active'));
+            event.target.classList.add('active');
+        }
+    </script>
+</body>
+</html>
