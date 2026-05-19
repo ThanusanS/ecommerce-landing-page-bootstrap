@@ -2,8 +2,9 @@
 
 ## 🚀 Modern Responsive E-Commerce UI (HTML + CSS + Bootstrap)
 
-![Banner](https://dummyimage.com/1200x400/0d6efd/ffffff\&text=E-Commerce+Landing+Page+%7C+Bootstrap+Project)
-
+<p align="center">
+  <img src="banner.png" width="100%" />
+</p>
 ---
 
 ## 📊 Badges
