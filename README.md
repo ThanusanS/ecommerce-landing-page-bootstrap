@@ -5,7 +5,6 @@
 <p align="center">
   <img src="banner.png" width="100%" />
 </p>
----
 
 ## 📊 Badges
 
@@ -28,12 +27,6 @@ It simulates a real-world online store UI with pages like product listing, cart,
 ## 🌐 Live Demo
 
 🔗 [View Live Project](https://ecom-frontend-teal-nine.vercel.app/)
-
----
-
-## 🎬 UI Preview
-
-![Demo GIF](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExd2R1Z2V1b2xqZ2V0b3Z0dGJxZ2V6dW1qZ3B1b2V0eG1wY2F2dCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/3o7aD2saalBwwftBIY/giphy.gif)
 
 ---
 
